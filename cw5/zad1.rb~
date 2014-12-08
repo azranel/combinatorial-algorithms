@@ -1,0 +1,16 @@
+n, t = 7, [7,5,4,3,2]
+
+i = t.size-1
+while (t[i-1]-t[i]==1) and (i!=0) 
+  i -= 1
+end
+
+if i==0 and t[i]==n
+  puts "Nie ma nastepnika"
+else
+  t[i]+=1
+  for j in (i+1...t.size)
+    t[j] = t.size-j
+  end
+  puts t.to_s
+end

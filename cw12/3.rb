@@ -13,4 +13,6 @@ def partition(n,b,m)
 	end
 end
 
-partition(7,7,0)
+m = 7
+
+partition(m,m,0)

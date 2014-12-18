@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+# nil jako pierwszy element żeby iterować od indeksu 1
 tab = [nil, 6,3,3,2,1]
 
 result = [nil]

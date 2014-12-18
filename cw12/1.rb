@@ -1,14 +1,12 @@
 #!/usr/bin/env ruby
 
 n, k = 7, 4
-tab = [[]]
+tab = []
 
-n.times { tab << [] }
+(n+1).times { tab << [] }
 
 for i in (0..n)
 	for j in (0..k)
-		# puts "#{i} #{j}"
-		# puts tab.to_s
 		case
 		when i==0 && j==0 then tab[i][j] = 1
 		when i>0 && j==0 then tab[i][j] = 0

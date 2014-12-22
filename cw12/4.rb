@@ -1,26 +1,11 @@
 #!/usr/bin/env ruby
 
-n, k = 7, 2
+n, $k = 10, 9
 
 $tab = []
 $partition_result = []
 
-# Funkcja z zadania 3
-def partition(n,b,m)
-  if n==0
-    $partition_result << $tab[0..m].compact.clone
-  else
-    for i in (1..[b,n].min)
-      $tab[m+1] = i
-      partition(n-i,i,m+1)
-    end
-  end
-end
-
-partition(n,n,0)
-
-# Funkcja z zadania 2
-$partition_result.each do |tab|
+def conjugate(tab)
   # Zrobione tak żeby tablica na samym pcozątku miała nila; umożliwia indeksowanie od 1
   tab = tab.unshift(nil)
   result = [nil]
@@ -35,7 +20,23 @@ $partition_result.each do |tab|
       result[i] += 1
     end
   end
-
-  # Wypisywanie tylko tych które mają rozmiar równy k
-  puts result.compact.to_s if result.compact.size==k
+  
+  puts result.compact[0...$k].to_s
 end
+
+
+# Funkcja z zadania 3
+def partition(n,b,m)
+  if n == 0
+    # Sprzeżenie podziału liczby
+    conjugate($tab[0..m].compact.clone)
+  else
+    for i in (1..[b,n].min)
+      $tab[m+1] = i
+      partition(n-i,i,m+1)
+    end
+  end
+end
+
+$tab[0] = n
+partition(n-$k,$k,1)

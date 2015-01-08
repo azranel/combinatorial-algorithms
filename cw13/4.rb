@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+# Dane do wprowadzenia
 n, r = 5, 39
 
 l = [nil]

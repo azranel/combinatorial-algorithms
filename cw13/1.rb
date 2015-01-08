@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+# Dane do wprowadzenia (t - krawędzie grafu)
 n, t = 5, [[1, 2], [1, 3], [3, 4], [2, 5]]
 
 
@@ -32,4 +33,4 @@ end
 end
 
 # Krok 6
-puts l
+puts l.compact.to_s

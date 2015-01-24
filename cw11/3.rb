@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-m = 4
+m = 5
 f = []
 fmax = []
 

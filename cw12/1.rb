@@ -7,7 +7,7 @@ tab = []
 
 for i in (0..n)
 	for j in (0..k)
-		case
+	  case
 		when i==0 && j==0 then tab[i][j] = 1
 		when i>0 && j==0 then tab[i][j] = 0
 		when j>i then tab[i][j] = 0

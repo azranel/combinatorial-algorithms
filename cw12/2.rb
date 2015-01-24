@@ -16,4 +16,4 @@ for j in (2..tab.size-1)
 	end
 end
 
-puts result.compact.to_s
+puts result[1..nprim]
